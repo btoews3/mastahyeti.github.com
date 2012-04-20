@@ -113,60 +113,50 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="http://balupton.github.com/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
-    <!--><script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-transition.js"></script>
-    <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-alert.js"></script>
-    <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-modal.js"></script>
-    <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-dropdown.js"></script>
-    <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-scrollspy.js"></script>
-    <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-tab.js"></script>
-    <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-tooltip.js"></script>
-    <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-popover.js"></script>
-    <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-button.js"></script>
-    <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-collapse.js"></script>
-    <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-carousel.js"></script>
-    <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-typeahead.js"></script>-->
     <script defer>
-      function updateContent(){
-        // get state
-        var State = History.getState();
-        History.log(State.data, State.title, State.url);
-        var page = State.data.page;
-        if (page == undefined) page='home';
-        
-        // do content
-        var oldcontent = $('.hero-unit').find('.tab-pane.current');
-        var newcontent = $('.hero-unit').find('.tab-pane#'+page);
-        oldcontent.toggleClass('current');
-        newcontent.toggleClass('current');
-        oldcontent.fadeOut('fast',function (){
-          newcontent.fadeIn('fast');
+      $(window).load(function(){
+        function updateContent(){
+          // get state
+          var State = History.getState();
+          History.log(State.data, State.title, State.url);
+          var page = State.data.page;
+          if (page == undefined) page='home';
+          
+          // do content
+          var oldcontent = $('.hero-unit').find('.tab-pane.current');
+          var newcontent = $('.hero-unit').find('.tab-pane#'+page);
+          oldcontent.toggleClass('current');
+          newcontent.toggleClass('current');
+          oldcontent.fadeOut('fast',function (){
+            newcontent.fadeIn('fast');
+          });
+          
+          // do nav bar
+          $('.nav').find('.active').toggleClass('active');
+          $('.nav').find('.jslink#'+page).parent().toggleClass('active');
+        }
+  
+        (function(window,undefined){
+  
+            // Prepare
+            var History = window.History; // Note: We are using a capital H instead of a lower h
+            if ( !History.enabled ) {
+                 // History.js is disabled for this browser.
+                 // This is because we can optionally choose to support HTML4 browsers or not.
+                return false;
+            }
+  
+            // Bind to StateChange Event
+            History.Adapter.bind(window,'statechange',updateContent);
+        })(window);
+  
+        $('.jslink').on('click',function(clickEvent){
+          var uri = clickEvent.target.id;
+          History.pushState({page:uri},uri,uri)
         });
         
-        // do nav bar
-        $('.nav').find('.active').toggleClass('active');
-        $('.nav').find('.jslink#'+page).parent().toggleClass('active');
-      }
-
-      (function(window,undefined){
-
-          // Prepare
-          var History = window.History; // Note: We are using a capital H instead of a lower h
-          if ( !History.enabled ) {
-               // History.js is disabled for this browser.
-               // This is because we can optionally choose to support HTML4 browsers or not.
-              return false;
-          }
-
-          // Bind to StateChange Event
-          History.Adapter.bind(window,'statechange',updateContent);
-      })(window);
-
-      $('.jslink').on('click',function(clickEvent){
-        var uri = clickEvent.target.id;
-        History.pushState({page:uri},uri,uri)
+        updateContent();
       });
-      
-      updateContent();
     </script>
   </body>
 </html>
