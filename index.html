@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -127,6 +126,13 @@
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-carousel.js"></script>
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-typeahead.js"></script>
     <script defer>
+      function updateContent(){
+        var active = History.getState().data.active;
+        if (active == undefined) active='home';
+        $('.hero-unit').find('.active').tab.hide();
+        $('.hero-unit').find('#'+active).tab.show();
+      }
+
       (function(window,undefined){
 
           // Prepare
@@ -146,11 +152,10 @@
 
       $('.jslink').on('click',function(clickEvent){
         var uri = clickEvent.srcElement.id;
-        console.log("#"+uri)
-        var elt = $('.hero-unit').find("#"+uri);
-        console.log(elt);
-        History.pushState({active:elt},'title',uri)
+        History.pushState({active:uri},uri,uri)
       });
+      
+
     </script>
   </body>
 </html>
