@@ -127,10 +127,12 @@
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-typeahead.js"></script>
     <script defer>
       function updateContent(){
-        var active = History.getState().data.active;
+        var State = History.getState();
+        History.log(State.data, State.title, State.url);
+        var active = State.data.active;
         if (active == undefined) active='home';
-        $('.hero-unit').find('.active').tab.hide();
-        $('.hero-unit').find('#'+active).tab.show();
+        $('.hero-unit').find('.active').tab('hide');
+        $('.hero-unit').find('#'+active).tab('show');
       }
 
       (function(window,undefined){
@@ -144,10 +146,7 @@
           }
 
           // Bind to StateChange Event
-          History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
-              var State = History.getState(); // Note: We are using History.getState() instead of event.state
-              History.log(State.data, State.title, State.url);
-          });
+          History.Adapter.bind(window,'statechange',updateContent);
       })(window);
 
       $('.jslink').on('click',function(clickEvent){
