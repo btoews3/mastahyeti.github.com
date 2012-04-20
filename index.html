@@ -137,9 +137,10 @@
         var oldcontent = $('.hero-unit').find('.tab-pane.current');
         var newcontent = $('.hero-unit').find('.tab-pane#'+page);
         oldcontent.toggleClass('current');
-        oldcontent.fadeOut('fast');
         newcontent.toggleClass('current');
-        newcontent.fadeIn('fast');
+        oldcontent.fadeOut('fast',function (){
+          newcontent.fadeIn('fast');
+        });
         
         // do nav bar
         $('.nav').find('.active').toggleClass('active');
