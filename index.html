@@ -154,7 +154,7 @@
       })(window);
 
       $('.jslink').on('click',function(clickEvent){
-        var uri = clickEvent.srcElement.id;
+        var uri = clickEvent.target.id;
         History.pushState({page:uri},uri,uri)
       });
       
