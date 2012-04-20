@@ -134,7 +134,7 @@
         var oldcontent = $('.hero-unit').find('.tab-pane.current');
         var newcontent = $('.hero-unit').find('.tab-pane#'+page);
         oldcontent.toggleClass('current');
-        oldcontent.slideUp('slow');
+        oldcontent.fadeOut('fast');
         newcontent.toggleClass('current');
         newcontent.slideDown('slow');
       }
