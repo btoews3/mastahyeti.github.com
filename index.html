@@ -131,8 +131,8 @@
         History.log(State.data, State.title, State.url);
         var active = State.data.active;
         if (active == undefined) active='home';
-        $('.hero-unit').find('.active').tab('hide');
-        $('.hero-unit').find('#'+active).tab('show');
+        $('.hero-unit').find('.tab-pane.active').hide('slow');
+        $('.hero-unit').find('.tab-pane#'+active).show('slow');
       }
 
       (function(window,undefined){
