@@ -43,11 +43,11 @@
           <a class="brand" href="#">Project name</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active" data-toggle="tab"><a href="#">Home</a></li>
-              <li><a href="#about" data-toggle="tab">About</a></li>
-              <li><a href="#contact" data-toggle="tab">Contact</a></li>
+              <li class="active"><a class='jslink' id='home'>Home</a></li>
+              <li><a class='jslink' id='about'>About</a></li>
+              <li><a class='jslink' id='contact'>Contact</a></li>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
     </div>
@@ -55,39 +55,48 @@
     <div class="container">
 
       <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit tab-content">
+      <div class="hero-unit tab-content" id="big-idea">
         <div class="tab-pane active" id="home">
           <h1>Home</h1>
-          <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-          <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+          <p>hi</p>
+          <p class="visible-desktop"><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
         </div>
         <div class="tab-pane" id="about">
           <h1>About</h1>
           <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-          <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+          <p class="visible-desktop"><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
         </div>
         <div class="tab-pane" id="contact">
           <h1>Contact</h1>
-          <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-          <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie tempor risus, a tincidunt libero interdum eget. Proin et lobortis velit. Nullam luctus aliquam ornare. Vestibulum dapibus lorem nec nunc volutpat consectetur. In a velit eget dui viverra semper. Praesent aliquam odio ac turpis lacinia consectetur. Duis semper purus quis tortor bibendum sed congue velit blandit. Nam pharetra tellus convallis mauris elementum laoreet. Curabitur sagittis porttitor sem, at iaculis elit facilisis id.
+          </p><p>
+          Donec dignissim interdum dui quis pharetra. Quisque ullamcorper vulputate eros, scelerisque feugiat mauris tempor et. Donec est sapien, laoreet eget luctus ac, rutrum eget sem. Sed ac auctor est. Nunc rutrum mauris eget justo fringilla euismod. Nulla dignissim, ante vel scelerisque convallis, lectus ligula bibendum neque, fermentum dapibus mi risus et dui. Vivamus felis ante, convallis in feugiat a, volutpat eu dui.
+          </p><p>
+          Fusce elementum sodales quam, id sodales nibh pellentesque vel. Mauris gravida semper ante, et tempor enim ultricies sit amet. Nunc et justo et diam accumsan lobortis non et mauris. Aliquam erat volutpat. Cras ac diam vitae nunc viverra interdum. Vivamus at porta magna. Nullam tellus neque, scelerisque nec vehicula ut, consequat in metus. Nunc luctus neque ac ligula commodo sed porta augue eleifend. Vivamus scelerisque scelerisque ultricies. Duis eu accumsan nisi. Duis nec est fermentum metus porta vehicula. Cras eu sapien ac nunc pretium vulputate vitae sed mauris. In eu felis enim. Vivamus a elementum nulla. Duis varius, lacus at ultrices fermentum, magna felis tincidunt lorem, vitae hendrerit nisl elit sit amet nunc. Sed sapien augue, faucibus vitae porta eget, scelerisque eget orci.
+          </p><p>
+          Nam gravida ante suscipit lacus lobortis nec vestibulum felis posuere. Quisque viverra nulla vitae ipsum pellentesque scelerisque. Donec vulputate pulvinar turpis. Sed dignissim, leo ut faucibus pellentesque, lacus metus molestie urna, elementum dignissim orci purus ac turpis. Proin vehicula nulla id nunc lobortis consectetur. Maecenas dolor dui, sollicitudin sit amet laoreet ac, malesuada tempus lacus. Vivamus dapibus iaculis dictum. Morbi bibendum erat et mi lobortis a porta ligula ultricies. Duis porttitor laoreet tempor. Curabitur laoreet, enim nec congue fringilla, velit leo malesuada urna, semper euismod nibh neque vitae justo. Pellentesque tellus purus, mollis quis facilisis non, ornare a lorem. Etiam ac laoreet nisl. Suspendisse facilisis nisi vitae sem ornare sed tristique odio aliquam. Etiam at mauris arcu. Proin in hendrerit felis. Nunc fermentum vestibulum orci.
+          </p><p>
+          Morbi sodales suscipit tortor sit amet sagittis. Donec egestas lectus molestie nunc euismod et pretium neque ornare. Aliquam odio nisl, ornare et rhoncus vitae, accumsan in nunc. Praesent sed sapien non turpis pharetra porttitor. Fusce faucibus consequat metus, et dapibus elit mollis quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras blandit ultrices quam eu rhoncus. Integer mattis dignissim fringilla. Fusce in enim quis sapien vestibulum vulputate ut ac metus. Phasellus vulputate faucibus justo sed feugiat. Curabitur quis velit nec nunc adipiscing tempor. Duis rhoncus mauris scelerisque elit tempus euismod. Phasellus in gravida est. Nulla condimentum, est non tempor pulvinar, ipsum odio fringilla elit, id lacinia magna tortor vitae nisi.</p>
+          <p class="visible-desktop"><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
         </div>
       </div>
 
       <!-- Example row of columns -->
-      <div class="row">
-        <div class="span4 visible-desktop">
+      <div class="row visible-desktop" id="small-ideas">
+        <div class="span4">
           <h2>Heading</h2>
            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
-        <div class="span4 visible-desktop">
+        <div class="span4">
           <h2>Heading</h2>
            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
        </div>
-        <div class="span4 visible-desktop">
+        <div class="span4">
           <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
       </div>
@@ -104,6 +113,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://balupton.github.com/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-transition.js"></script>
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-alert.js"></script>
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-modal.js"></script>
@@ -116,8 +126,31 @@
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-collapse.js"></script>
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-carousel.js"></script>
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-typeahead.js"></script>
-    <script>
-      $('.btn-primary').on('click',function(eventObject){console.log(eventObject)});
+    <script defer>
+      (function(window,undefined){
+
+          // Prepare
+          var History = window.History; // Note: We are using a capital H instead of a lower h
+          if ( !History.enabled ) {
+               // History.js is disabled for this browser.
+               // This is because we can optionally choose to support HTML4 browsers or not.
+              return false;
+          }
+
+          // Bind to StateChange Event
+          History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
+              var State = History.getState(); // Note: We are using History.getState() instead of event.state
+              History.log(State.data, State.title, State.url);
+          });
+      })(window);
+
+      $('.jslink').on('click',function(clickEvent){
+        var uri = clickEvent.srcElement.id;
+        console.log("#"+uri)
+        var elt = $('.hero-unit').find("#"+uri);
+        console.log(elt);
+        History.pushState({active:elt},'title',uri)
+      });
     </script>
   </body>
 </html>
