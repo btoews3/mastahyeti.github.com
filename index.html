@@ -113,7 +113,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="http://balupton.github.com/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
-    <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-transition.js"></script>
+    <!--><script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-transition.js"></script>
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-alert.js"></script>
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-modal.js"></script>
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-dropdown.js"></script>
@@ -124,15 +124,19 @@
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-button.js"></script>
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-collapse.js"></script>
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-carousel.js"></script>
-    <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-typeahead.js"></script>
+    <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-typeahead.js"></script>-->
     <script defer>
       function updateContent(){
         var State = History.getState();
         History.log(State.data, State.title, State.url);
         var active = State.data.active;
         if (active == undefined) active='home';
-        $('.hero-unit').find('.tab-pane.active').hide('slow');
-        $('.hero-unit').find('.tab-pane#'+active).show('slow');
+        var oldcontent = $('.hero-unit').find('.tab-pane.active');
+        var newcontent = $('.hero-unit').find('.tab-pane#'+active);
+        oldcontent.toggleClass('active');
+        oldcontent.slideUp('slow');
+        newcontent.toggleClass('active');
+        newcontent.slideDown('slow');
       }
 
       (function(window,undefined){
