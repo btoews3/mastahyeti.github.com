@@ -55,7 +55,7 @@
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit tab-content" id="big-idea">
-        <div class="tab-pane active" id="home">
+        <div class="tab-pane current" id="home">
           <h1>Home</h1>
           <p>hi</p>
           <p class="visible-desktop"><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
@@ -129,13 +129,13 @@
       function updateContent(){
         var State = History.getState();
         History.log(State.data, State.title, State.url);
-        var active = State.data.active;
-        if (active == undefined) active='home';
-        var oldcontent = $('.hero-unit').find('.tab-pane.active');
-        var newcontent = $('.hero-unit').find('.tab-pane#'+active);
-        oldcontent.toggleClass('active');
+        var page = State.data.page;
+        if (page == undefined) page='home';
+        var oldcontent = $('.hero-unit').find('.tab-pane.current');
+        var newcontent = $('.hero-unit').find('.tab-pane#'+page);
+        oldcontent.toggleClass('current');
         oldcontent.slideUp('slow');
-        newcontent.toggleClass('active');
+        newcontent.toggleClass('current');
         newcontent.slideDown('slow');
       }
 
@@ -155,10 +155,10 @@
 
       $('.jslink').on('click',function(clickEvent){
         var uri = clickEvent.srcElement.id;
-        History.pushState({active:uri},uri,uri)
+        History.pushState({page:uri},uri,uri)
       });
       
-
+      updateContent();
     </script>
   </body>
 </html>
