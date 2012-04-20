@@ -127,16 +127,23 @@
     <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-typeahead.js"></script>-->
     <script defer>
       function updateContent(){
+        // get state
         var State = History.getState();
         History.log(State.data, State.title, State.url);
         var page = State.data.page;
         if (page == undefined) page='home';
+        
+        // do content
         var oldcontent = $('.hero-unit').find('.tab-pane.current');
         var newcontent = $('.hero-unit').find('.tab-pane#'+page);
         oldcontent.toggleClass('current');
         oldcontent.fadeOut('fast');
         newcontent.toggleClass('current');
         newcontent.slideDown('slow');
+        
+        // do nav bar
+        $('.nav').find('jslink.active').toggleClass('active');
+        $('.nav').find('jslink#'+page).toggleClass('active');
       }
 
       (function(window,undefined){
