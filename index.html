@@ -142,8 +142,8 @@
         newcontent.slideDown('slow');
         
         // do nav bar
-        $('.nav').find('jslink.active').toggleClass('active');
-        $('.nav').find('jslink#'+page).toggleClass('active');
+        $('.nav').find('.active').toggleClass('active');
+        $('.nav').find('.jslink#'+page).parent().toggleClass('active');
       }
 
       (function(window,undefined){
