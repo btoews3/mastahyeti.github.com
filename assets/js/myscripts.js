@@ -22,7 +22,7 @@ fix_name();
 
 function set_active(){
     var pathname = document.location.pathname;
-    if (pathname != ''){
+    if (pathname != '/' && pathname != ''){
         pathname = pathname.slice(1).split('.')[0];
     }
     else {
