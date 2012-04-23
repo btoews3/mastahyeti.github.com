@@ -16,6 +16,7 @@ var homepage = '2467411'
 
 var History = window.History
 var cache = {}
+var isloading = false
 
 // get a gist from github by its id
 function get_gist(id,callback){
@@ -32,30 +33,22 @@ function get_gist(id,callback){
 
 // fix our branding
 function fix_static_content(){
-	$('.site_title_short').html(site_title_short)
-	$('.site_title_long').html(site_title_long)
+	if(!isloading){
+		console.log('fix static')
+		$('.site_title_short').html(site_title_short)
+		$('.site_title_long').html(site_title_long)
+	}
 }
 
 function set_active(){
-	hash = location.hash.slice(1)
-	if (hash == '')
-		hash = homepage
-	$('.active').removeClass('active')
-	$('.jslink#'+hash).parent().addClass('active')
-}
-
-function loading(){
-	console.log('loading')
-	$('.brand').html("<image src='assets/img/loading.gif'>")
-	$('.dropdown').hide()
-	$('.jslink').hide()
-}
-
-function done_loading(){
-	console.log('done loading')
-	$('.brand').html(site_title_short)
-	$('.dropdown').show()
-	$('.jslink').show()	
+	if(!isloading){
+		console.log('set active')
+		hash = location.hash.slice(1)
+		if (hash == '')
+			hash = homepage
+		$('.active').removeClass('active')
+		$('.jslink#'+hash).parent().addClass('active')
+	}
 }
 
 // handle the user clicking a link
@@ -80,9 +73,6 @@ $(document).ready(function(){
 	// if we are on our homepage, do homepage stuff
 	if (location.hash == '')
 		location.hash = homepage
-	
-	// display loading animation
-//	loading()
 
 	// sort out the pages and the posts
 	$.getJSON(gists_url,function(response){
@@ -109,6 +99,11 @@ $(document).ready(function(){
 		}
 		set_active()
 		// hide loading animation
-//		done_loading()
+		$('.overlay').addClass('fadeout').removeClass('pre-fadeout')
+		// incase they don't support animation
+		if($('.overlay').css('opacity')==0)
+			$('.overlay').hide()
+		else
+			setTimeout("$('.overlay').hide()",1000)
 	})
 })
