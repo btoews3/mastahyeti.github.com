@@ -34,7 +34,6 @@ function get_gist(id,callback){
 // fix our branding
 function fix_static_content(){
 	if(!isloading){
-		console.log('fix static')
 		$('.site_title_short').html(site_title_short)
 		$('.site_title_long').html(site_title_long)
 	}
@@ -42,7 +41,6 @@ function fix_static_content(){
 
 function set_active(){
 	if(!isloading){
-		console.log('set active')
 		hash = location.hash.slice(1)
 		if (hash == '')
 			hash = homepage
