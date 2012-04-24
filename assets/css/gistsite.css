@@ -15,7 +15,7 @@ div.preview {
 
 .preview div.content {
   height:5em;
-  overflow: scroll;            
+  overflow: auto;            
 }
 
 div.overlay {              
