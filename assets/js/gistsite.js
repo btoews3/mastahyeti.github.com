@@ -15,6 +15,7 @@ homepage = '2467411'
 
 History = window.History
 cache = {}
+converter = new Showdown.converter()
 
 // get a gist from github by its id
 function get_gist(id,callback){
@@ -47,7 +48,12 @@ function load_gist_into(id,$target){
 			// load in file contents
 			$target.find('.content').html('')
 			$.each(response.data.files,function(k,v){
-				$target.find('.content').append(v.content)
+				fnparts = v.filename.split('.')
+				content = v.content
+				if(fnparts[fnparts.length - 1] == 'md'){
+					content = converter.makeHtml(content)
+				}
+				$target.find('.content').append(content)
 			})
 			fix_static_content()
 		}

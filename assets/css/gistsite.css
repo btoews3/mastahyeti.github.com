@@ -26,12 +26,21 @@ div.overlay {
   top: 0px;
   left: 0px;
   background-color: white;
-  padding-top: 20%;
+}
+
+.overlay noscript {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10em;
+  width: 20%;
 }
 
 .overlay img {
-  display: block;
-  margin: auto;
+  display: none;
+  margin-top: 10em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pre-fadeout {

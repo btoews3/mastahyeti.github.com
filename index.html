@@ -60,11 +60,20 @@
 
     </div>
     <div class='overlay pre-fadeout'>
-      <img src='assets/img/loading.gif'>
+      <img src='assets/img/loading.gif' onload='this.style.display="block"'>
+      <noscript>
+      <p>
+      Hi. I'm Ben. This is my blog. It is a dynamic JavaScript application that pulls my blog posts from Github Gists. Because all of this happens in the browser using JavaScript, it won't be of much use to you without JavaScript being enabled. Please enable JavaScript in your browser and come back.
+      </p>
+      <p>Thanks. </p>
+      <p>-- Ben Toews (mastahyeti)</p>
+      </noscript>
     </div>
     <script src="assets/js/jquery.js" type="text/javascript"></script>
+    <script src="assets/js/markdown.js"></script>
+    <script src="assets/js/showdown.js"></script>
+    <script src="assets/js/gistsite.js" type="text/javascript"></script>
     <script src="assets/js/bootstrap-collapse.js" type="text/javascript"></script>
     <script src="assets/js/bootstrap-dropdown.js"></script>
-    <script src="assets/js/gistsite.js" type="text/javascript"></script>
     </body>
 </html>
