@@ -1,0 +1,56 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+div.preview {
+
+}
+
+.preview div.content {
+  height:5em;
+  overflow: scroll;            
+}
+
+div.overlay {              
+  height: 100%;
+  width: 100%;
+  z-index: 1040;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: white;
+  padding-top: 20%;
+}
+
+.overlay img {
+  display: block;
+  margin: auto;
+}
+
+.pre-fadeout {
+  filter:alpha(opacity=90);
+  opacity:0.9;
+}
+
+.fadeout {
+  -webkit-animation: fadeout .25s;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation:    fadeout .25s;
+  -ms-animation:     fadeout .25s;
+  filter:alpha(opacity=90);
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeout {
+  0%   { opacity: 0.9; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes fadeout {
+  0%   { opacity: 0.9; }
+  100% { opacity: 0; }
+}
+@-ms-keyframes fadeout {
+  0%   { opacity: 0.9; }
+  100% { opacity: 0; }
+}
