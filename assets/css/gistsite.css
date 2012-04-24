@@ -3,6 +3,12 @@ body {
   padding-bottom: 40px;
 }
 
+@media (max-width: 980px) {
+  .hero-unit {
+    padding: 15px;
+  }
+}
+
 div.preview {
 
 }
