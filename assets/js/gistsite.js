@@ -1,8 +1,8 @@
 // START CONFIG
 username = 'mastahyeti'
 
-site_title_short = 'M.Y.'
-site_title_long = 'MastahYeti' 
+site_title_short = 'm.y.'
+site_title_long = 'mastahyeti' 
 
 pages_prefix = /gistblog-sitepage/
 blogpost_prefix = /gistblog-blogpost/
@@ -35,7 +35,6 @@ function load_gist_into(id,$target){
 	console.log('loading:'+id)
 	get_gist(id,function (response){
 		// make sure we own the gist (XSS protection)
-		console.log(response)
 		if (response.data.user.login == username){
 			// load in the title
 			description = response.data.description.split(':').slice(1).join(':')
@@ -76,6 +75,10 @@ function fix_static_content(){
 
 // handle the user clicking a link
 $(window).on('hashchange', load_gist)
+
+var foo = ''
+$('.brand').mouseenter(function(e){foo=this;$(this).html(site_title_long)})
+$('.brand').mouseleave(function(e){foo=this;$(this).html(site_title_short)})
 
 $(document).ready(function(){
 	// fix branding
