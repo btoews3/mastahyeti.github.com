@@ -10,7 +10,7 @@ blogpost_prefix = /gistblog-blogpost/
 gists_url = 'https://api.github.com/users/' + username + '/gists?callback=?'
 gist_url = 'https://api.github.com/gists/'
 
-homepage = '2467411'
+homepage = '2495861'
 // END CONFIG
 
 History = window.History
@@ -77,6 +77,8 @@ function load_gist(){
 function fix_static_content(){
 	$('.site_title_short').html(site_title_short)
 	$('.site_title_long').html(site_title_long)
+	$('a.site_title_short').prop('href',homepage)
+	$('a.site_title_long').prop('href',homepage)
 }
 
 // handle the user clicking a link
