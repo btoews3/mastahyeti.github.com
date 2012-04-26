@@ -77,8 +77,8 @@ function load_gist(){
 function fix_static_content(){
 	$('.site_title_short').html(site_title_short)
 	$('.site_title_long').html(site_title_long)
-	$('a.site_title_short').prop('href',homepage)
-	$('a.site_title_long').prop('href',homepage)
+	$('a.site_title_short').prop('href','#'+homepage)
+	$('a.site_title_long').prop('href','#'+homepage)
 }
 
 // handle the user clicking a link
