@@ -1,5 +1,5 @@
 // START CONFIG
-username = 'mastahyeti'
+username = 'btoews'
 
 site_title_short = 'm.y.'
 site_title_long = 'mastahyeti' 
@@ -95,8 +95,10 @@ $(document).ready(function(){
 
 	// sort out the pages and the posts
 	$.getJSON(gists_url,function(response){
-		if (response.meta.status != 200)
+		if (response.meta.status != 200){
+			console.log(response)
 			alert('Ajax error')
+		}
 		else {
 			// keep track of how many posts we find
 			post_count = 0
