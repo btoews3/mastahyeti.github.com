@@ -1,6 +1,7 @@
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-31264628-1']);
   _gaq.push(['_trackPageview']);
+  console.log(_gaq);
 
 (function(){var g=void 0,h=!0,i=null,k=!1,aa=encodeURIComponent,ba=Infinity,ea=setTimeout,fa=decodeURIComponent,l=Math;function ga(a,b){return a.name=b}
 var m="push",ha="slice",n="replace",ia="load",ja="floor",ka="charAt",la="value",p="indexOf",ma="match",na="port",oa="createElement",pa="path",q="name",t="host",u="toString",v="length",w="prototype",qa="clientWidth",x="split",ra="stopPropagation",ta="scope",y="location",ua="search",z="protocol",va="clientHeight",wa="href",A="substring",xa="apply",ya="navigator",B="join",C="toLowerCase",D;function za(a,b){switch(b){case 0:return""+a;case 1:return 1*a;case 2:return!!a;case 3:return 1E3*a}return a}function Aa(a){return"function"==typeof a}function Ba(a){return a!=g&&-1<(a.constructor+"")[p]("String")}function E(a,b){return g==a||"-"==a&&!b||""==a}function Ca(a){if(!a||""==a)return"";for(;a&&-1<" \n\r\t"[p](a[ka](0));)a=a[A](1);for(;a&&-1<" \n\r\t"[p](a[ka](a[v]-1));)a=a[A](0,a[v]-1);return a}
