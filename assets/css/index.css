@@ -101,3 +101,14 @@ a:hover {
 .post-list abbr {
   float: right;
 }
+
+#footer {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#footer a {
+  font-size: .6em;
+  font-weight: 200;
+  padding-right: 5px;
+}
