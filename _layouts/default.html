@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Ben Toews - {{ page.title }}</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/pygment.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAAAAABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8p0/7/KdP+/ynT/v8q0/7/KdT+/yrT/v8p1P7/KtP+/ynT/v8q0/7/KdP+/yrT/v8p0/7/KtP+/wAAAP8AAAAUJLrf/ynT/v8p0/7/KdP+/yrT/v8p0/7/AAAA/wAAAP8p0/7/KtP+/ynT/v8q0/7/KdP+/yKw0/8AAAAJAAAAAAAAAP8p0/7/KdP+/yrT/v8p1P7/KtP+/xJfcv8SX3L/KdP+/yrT/v8p0/7/KtP+/ynT/v8AAAD/AAAAAAAAAAAAAAAAAQYI/ynT/v8p0/7/KtP+/ynT/v8AAAD/AAAA/ynT/v8q0/7/KdP+/yrT/v8CDQ//AAAAAAAAAAAAAAAAAAAAAAAAAP8p0/7/KtP+/ynU/v8q0/7/Jsnx/wAAAP8aiqb/KtP+/ynT/v8q0/7/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/ynT/v8q0/7/KdP+/yrT/v8p0v3/AAAA/xyTsf8p0/7/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP4q0/7/AAAA/wAAAP8p1P7/KtP+/wAAAP8AAAD/KdP+/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/xBYav8AAAD/KdP+/ynT/v8AAAD/DERS/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD0ozvf/AAAA/wAAAP8AAAD/AAAA/yrT/v8AAACpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/ynT/v8p0/7/KdP+/ynT/v8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFHCL/KdT+/ynT/v8dlbT/AAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/yrU/v8q0/7/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/BBkf/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAIYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAgAEAAIABAADAAwAAwAMAAOAHAADgBwAA8A8AAPgPAAD4HwAA/D8AAPw/AAD+fwAA/38AAA==">
+    <link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAAAAABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8p0/7/KdP+/ynT/v8q0/7/KdT+/yrT/v8p1P7/KtP+/ynT/v8q0/7/KdP+/yrT/v8p0/7/KtP+/wAAAP8AAAAUJLrf/ynT/v8p0/7/KdP+/yrT/v8p0/7/AAAA/wAAAP8p0/7/KtP+/ynT/v8q0/7/KdP+/yKw0/8AAAAJAAAAAAAAAP8p0/7/KdP+/yrT/v8p1P7/KtP+/xJfcv8SX3L/KdP+/yrT/v8p0/7/KtP+/ynT/v8AAAD/AAAAAAAAAAAAAAAAAQYI/ynT/v8p0/7/KtP+/ynT/v8AAAD/AAAA/ynT/v8q0/7/KdP+/yrT/v8CDQ//AAAAAAAAAAAAAAAAAAAAAAAAAP8p0/7/KtP+/ynU/v8q0/7/Jsnx/wAAAP8aiqb/KtP+/ynT/v8q0/7/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/ynT/v8q0/7/KdP+/yrT/v8p0v3/AAAA/xyTsf8p0/7/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP4q0/7/AAAA/wAAAP8p1P7/KtP+/wAAAP8AAAD/KdP+/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/xBYav8AAAD/KdP+/ynT/v8AAAD/DERS/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD0ozvf/AAAA/wAAAP8AAAD/AAAA/yrT/v8AAACpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/ynT/v8p0/7/KdP+/ynT/v8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFHCL/KdT+/ynT/v8dlbT/AAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/yrU/v8q0/7/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/BBkf/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAIYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAgAEAAIABAADAAwAAwAMAAOAHAADgBwAA8A8AAPgPAAD4HwAA/D8AAPw/AAD+fwAA/38AAA==">
+    <meta name="viewport" content="width=device-width">
+    <meta name='description' content="Ben Toews (mastahyeti) is a security consultant, researcher and hacker. In adition to pentesting and hacking applications, Ben Toews has been working on httpShell and bbqsql recently.">
+    <meta name='keywords' content="mastahyeti, Toews, Ben Toews, security, hacker, hacking, bbqsql, httpShell">
+  </head>
+  <body>
+    <div id='header'>
+      <div id='header-inner'>
+        <div id='site-title'>Ben Toews</div>
+        <div id='links'>
+          <a href='/' class='icon-book' title='Archives'></a>
+          <a href='about.html' class='icon-question-sign' title='About'></a>
+          <a href='mailto:mastahyeti@gmail.com' class='icon-envelope-alt' title='Email'></a>
+          <a href='//twitter.com/mastahyeti' class='icon-twitter-sign' title='Twitter'></a>
+          <a href='//github.com/mastahyeti' class='icon-github' title='GitHub'></a>
+        </div>
+      </div>
+    </div>
+
+    <div id='content'>
+      {{ content }}
+    </div>
+  </body>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31264628-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</html>
