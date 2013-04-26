@@ -2,21 +2,22 @@ body {
   background-image: url('/assets/images/background.png');
   font-family: sans-serif;
   font-weight: 200;
-  font-size: .9em;
+  font-size: 1.2em;
   margin: 0px;
 }
 
 h1, h2, h3, h4, h5, p, pre {margin: 0px;padding: 0px;}
 
 h1, h2, h3, h4, h5 {
-  margin: 5px 0px 5px 0px;
+  margin: 15px 0px 15px 0px;
   font-weight: 400;
   text-decoration: underline;
 }
 
 p {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-align: justify;
+  line-height: 1.2em;
 }
 
 a {
@@ -54,7 +55,7 @@ a:hover {
 
 #header {
   height: 50px;
-  max-width: 500px;
+  max-width: 700px;
   padding: 10px;
   margin: auto auto 10px auto;
   background-color: white;
@@ -78,7 +79,7 @@ a:hover {
 
 #content {
   display: block;
-  max-width: 480px;
+  max-width: 680px;
   min-height: 300px;
   padding: 20px;
   margin: auto;
