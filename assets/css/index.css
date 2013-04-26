@@ -26,6 +26,10 @@ a {
   font-weight: 500;
 }
 
+p a {
+  font-weight: 700;
+}
+
 a:hover {
   color: #A7A7A7;
 }
